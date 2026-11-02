@@ -1,18 +1,61 @@
+
 let tolls = [
     { id: 101, name: "Ravi", vehicle: "TN01AB1234", location: "Chennai", amount: 100, status: "Paid" },
     { id: 102, name: "Priya", vehicle: "TN02CD5678", location: "Tambaram", amount: 80, status: "Pending" },
-    { id: 103, name: "Arun", vehicle: "TN03EF9012", location: "Vellore", amount: 120, status: "Paid" }
+    { id: 103, name: "Arun", vehicle: "TN03EF9012", location: "Vellore", amount: 120, status: "Paid" },
+    { id: 104, name: "Kumar", vehicle: "TN04GH3456", location: "Kanchipuram", amount: 90, status: "Pending" }
 ];
 
+// Display toll details
 for (let t of tolls) {
     console.log("Ticket ID:", t.id);
-    console.log("User Name:", t.name);
+    console.log("Name:", t.name);
     console.log("Vehicle:", t.vehicle);
-    console.log("Toll Location:", t.location);
+    console.log("Location:", t.location);
     console.log("Amount:", t.amount);
     console.log("Status:", t.status);
     console.log("----------------");
 }
 
+// Calculate total collection
+let total = 0, paid = 0, pending = 0;
+
+for (let t of tolls) {
+    total += t.amount;
+
+    if (t.status == "Paid")
+        paid++;
+    else
+        pending++;
+}
+
+console.log("Total Collection:", total);
+console.log("Paid Tickets:", paid);
+console.log("Pending Tickets:", pending);
+
+// Update payment status
 tolls[1].status = "Paid";
 console.log("Updated Status:", tolls[1].status);
+
+// Search vehicle
+let search = "TN03EF9012";
+let found = false;
+
+for (let t of tolls) {
+    if (t.vehicle == search) {
+        console.log("Vehicle Found!");
+        console.log("Owner:", t.name);
+        console.log("Amount:", t.amount);
+        found = true;
+    }
+}
+
+if (!found)
+    console.log("Vehicle Not Found");
+
+// Display final report
+console.log("FINAL TOLL REPORT");
+
+for (let t of tolls) {
+    console.log(t.id, t.name, t.status);
+}
