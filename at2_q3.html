@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GET vs POST</title>
+</head>
+<body>
+    <h1>GET vs POST Login</h1>
+
+    <h3>GET Method</h3>
+    <form method="get">
+        <label>Username:</label>
+        <input type="text" name="user" required>
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" name="pass" required>
+        <br><br>
+
+        <button type="submit">Submit Using GET</button>
+    </form>
+
+    <h3>POST Method</h3>
+    <form method="post"
+          onsubmit="event.preventDefault();
+          document.getElementById('result').textContent =
+          'POST demonstration completed. No data was sent to a server.';">
+        <label>Username:</label>
+        <input type="text" name="user" required>
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" name="pass" required>
+        <br><br>
+
+        <button type="submit">Submit Using POST</button>
+    </form>
+
+    <p id="result"></p>
+
+    <p>GET displays form parameters in the URL.
+       POST normally sends form data in the request body.</p>
+    <p>Use HTTPS for secure communication.</p>
+</body>
+</html>

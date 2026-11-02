@@ -1,0 +1,15 @@
+
+body {
+    background-color: #fce7f3;
+    font-family: Arial;
+    text-align: center;
+}
+
+h1 {
+    color: red;
+}
+
+p {
+    color: purple;
+    font-size: 24px;
+}

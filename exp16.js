@@ -1,0 +1,13 @@
+"use strict";
+let id = 101;
+let userName = "Ravi";
+let category = "Water Leakage";
+let desc = "Pipe damaged near my house";
+let complaintStatus = "Pending";
+console.log("Complaint ID:", id);
+console.log("User Name:", userName);
+console.log("Category:", category);
+console.log("Description:", desc);
+console.log("Status:", complaintStatus);
+complaintStatus = "Resolved";
+console.log("Updated Status:", complaintStatus);

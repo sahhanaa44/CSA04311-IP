@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internal vs External CSS</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .screen {
+            width: 50%;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid gray;
+            border-radius: 10px;
+        }
+
+        .internal {
+            background-color: #e0f2fe;
+        }
+
+        .internal h2 {
+            color: blue;
+        }
+
+        .internal p {
+            color: green;
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="screen internal">
+        <h2>Internal CSS</h2>
+        <p>This screen uses Internal CSS.</p>
+        <button onclick="this.parentElement.style.backgroundColor='#bfdbfe'">
+            Change Background
+        </button>
+    </div>
+
+    <div class="screen external">
+        <h2>External CSS</h2>
+        <p>This screen uses External CSS.</p>
+        <button onclick="this.parentElement.style.backgroundColor='#fbcfe8'">
+            Change Background
+        </button>
+    </div>
+
+</body>
+</html>

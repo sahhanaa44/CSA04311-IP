@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Train Reservation System</title>
+<style>
+body{font-family:Arial;text-align:center;background:#eaf2f8}
+div{background:white;padding:15px;margin:15px auto;width:300px}
+input,select,button{padding:8px;margin:5px;width:85%}
+button{background:#1565c0;color:white;border:0}
+</style>
+</head>
+<body>
+<h1>Train Reservation System</h1>
+<div>
+<h3>Login</h3>
+<input id="user" placeholder="Username">
+<input id="pass" type="password" placeholder="Password">
+<button onclick="alert(user.value&&pass.value?'Login Successful':'Enter credentials')">Login</button>
+</div>
+<div>
+<h3>Search Train</h3>
+<input id="from" placeholder="From">
+<input id="to" placeholder="To">
+<input id="date" type="date">
+<select id="cls"><option>Sleeper</option><option>AC 3 Tier</option></select>
+<button onclick="result.innerHTML='Express Train | Seats: 40 | Fare: ₹500'">Search</button>
+<p id="result"></p>
+</div>
+<div>
+<h3>Book Ticket</h3>
+<input id="name" placeholder="Passenger Name">
+<button onclick="pnr.value=Math.floor(Math.random()*900000+100000);alert('Ticket Booked! PNR: '+pnr.value)">Book Ticket</button>
+<input id="pnr" placeholder="PNR Number">
+<button onclick="alert('PNR Status: Confirmed')">Check PNR</button>
+<button onclick="alert('Ticket Cancelled. Refund: ₹450')">Cancel Ticket</button>
+<button onclick="window.print()">Print Ticket</button>
+</div>
+</body>
+</html>

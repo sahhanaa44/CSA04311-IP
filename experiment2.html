@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f5f9;
+            padding: 30px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+        }
+
+        button {
+            background: #183153;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #success {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="registerForm">
+        <h2>Registration Form</h2>
+
+        <label>Email Address</label>
+        <input type="email" id="email" required
+               placeholder="Enter your email">
+        <p class="error" id="emailError"></p>
+
+        <label>Phone Number</label>
+        <input type="tel" id="phone" required
+               maxlength="10"
+               placeholder="Enter 10-digit number">
+        <p class="error" id="phoneError"></p>
+
+        <button type="submit">Register</button>
+        <p id="success"></p>
+    </form>
+
+    <script>
+        const email = document.getElementById("email");
+        const phone = document.getElementById("phone");
+
+        const emailPattern =
+            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        const phonePattern = /^[6-9]\d{9}$/;
+
+        function validateEmail() {
+            let valid = emailPattern.test(email.value.trim());
+
+            document.getElementById("emailError").textContent =
+                valid ? "" : "Enter a valid email address.";
+
+            return valid;
+        }
+
+        function validatePhone() {
+            let valid = phonePattern.test(phone.value.trim());
+
+            document.getElementById("phoneError").textContent =
+                valid ? "" : "Enter a valid 10-digit mobile number.";
+
+            return valid;
+        }
+
+        email.addEventListener("input", validateEmail);
+        phone.addEventListener("input", validatePhone);
+
+        document.getElementById("registerForm")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                if (validateEmail() && validatePhone()) {
+                    document.getElementById("success").textContent =
+                        "Registration details are valid!";
+                } else {
+                    document.getElementById("success").textContent = "";
+                }
+            });
+    </script>
+
+</body>
+</html>

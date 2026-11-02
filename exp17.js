@@ -1,0 +1,11 @@
+"use strict";
+let voterId = 101;
+let voterName = "Ravi";
+let candidate = "Arun";
+let voteStatus = "Not Submitted";
+console.log("Voter ID:", voterId);
+console.log("Voter Name:", voterName);
+console.log("Candidate:", candidate);
+console.log("Vote Status:", voteStatus);
+voteStatus = "Submitted";
+console.log("Updated Status:", voteStatus);
