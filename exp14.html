@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ReNewMarket</title>
+<style>
+body { font-family: Arial; text-align: center; background: #eef5f0; }
+.box { background: white; padding: 20px; width: 300px; margin: auto; }
+input, select, button { padding: 10px; margin: 6px; width: 90%; }
+button { background: darkgreen; color: white; border: none; }
+</style>
+</head>
+<body>
+<h2>ReNewMarket</h2>
+<h3>Second-Hand Products</h3>
+<div class="box">
+<input id="name" placeholder="Customer Name">
+<select id="item">
+<option value="">Select Product</option>
+<option>Mobile Phone</option>
+<option>Furniture</option>
+<option>Clothing</option>
+<option>Electronics</option>
+</select>
+<input id="price" type="number" placeholder="Product Price">
+<button onclick="buy()">Buy Product</button>
+<p id="result"></p>
+</div>
+<script>
+function buy() {
+let name = document.getElementById("name").value;
+let item = document.getElementById("item").value;
+let price = document.getElementById("price").value;
+if(name == "" || item == "" || price == "")
+alert("Please fill all details");
+else
+document.getElementById("result").innerHTML =
+"Order Placed!<br>Buyer: " + name +
+"<br>Product: " + item + "<br>Price: Rs." + price;
+}
+</script>
+</body>
+</html>

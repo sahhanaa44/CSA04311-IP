@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>InsureEasy</title>
+<style>
+body { font-family: Arial; text-align: center; background: #eef2f7; }
+form { background: white; padding: 20px; width: 300px; margin: auto; }
+input, select, button { padding: 10px; margin: 6px; width: 90%; }
+button { background: navy; color: white; border: none; }
+</style>
+</head>
+<body>
+<h2>InsureEasy - Insurance Management</h2>
+<form onsubmit="showDetails(event)">
+<input id="name" placeholder="Customer Name" required>
+<input id="phone" placeholder="Phone Number" required>
+<select id="policy" required>
+<option value="">Select Policy</option>
+<option>Health Insurance</option>
+<option>Vehicle Insurance</option>
+<option>Home Insurance</option>
+</select>
+<input id="amount" type="number" placeholder="Premium Amount" required>
+<button type="submit">Submit</button>
+</form>
+<p id="result"></p>
+<script>
+function showDetails(event) {
+event.preventDefault();
+let n = document.getElementById("name").value;
+let p = document.getElementById("phone").value;
+let t = document.getElementById("policy").value;
+let a = document.getElementById("amount").value;
+document.getElementById("result").innerHTML =
+"Customer: " + n + "<br>Phone: " + p +
+"<br>Policy: " + t + "<br>Premium: Rs." + a;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BlossomGifts</title>
+<style>
+body { font-family: Arial; text-align: center; background: #fff0f5; }
+.box { background: white; padding: 20px; width: 300px; margin: auto; }
+input, select, button { padding: 10px; margin: 6px; width: 90%; }
+button { background: #c2185b; color: white; border: none; }
+</style>
+</head>
+<body>
+<h2>BlossomGifts</h2>
+<h3>Flowers and Gifts</h3>
+<div class="box">
+<select id="item">
+<option value="">Select Category</option>
+<option>Roses</option>
+<option>Gift Basket</option>
+<option>Birthday Gifts</option>
+<option>Chocolates</option>
+</select>
+<input id="name" placeholder="Customer Name">
+<input id="price" type="number" placeholder="Price">
+<button onclick="order()">Place Order</button>
+<p id="result"></p>
+</div>
+<script>
+function order() {
+let item = document.getElementById("item").value;
+let name = document.getElementById("name").value;
+let price = document.getElementById("price").value;
+if(item == "" || name == "" || price == "")
+alert("Please fill all details");
+else
+document.getElementById("result").innerHTML =
+"Order Successful!<br>Customer: " + name +
+"<br>Item: " + item + "<br>Price: Rs." + price;
+}
+</script>
+</body>
+</html>
