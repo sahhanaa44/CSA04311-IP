@@ -1,0 +1,23 @@
+
+body {
+    margin: 20px;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+img {
+    width: 300px;
+}
+
+h2 {
+    color: darkblue;
+}
+
+#gallery {
+    margin: 10px;
+}

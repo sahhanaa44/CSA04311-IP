@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Creative Photography</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: lightgray;
+            text-align: center;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 15px;
+        }
+
+        .banner {
+            background-color: white;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        .banner p {
+            display: inline-block;
+            animation: slide 5s linear infinite;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            margin: 15px;
+            transition: 1s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .skew {
+            transform: skew(5deg);
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            transition: 1s;
+        }
+
+        button:hover {
+            background-color: blue;
+            transform: translateY(-5px);
+        }
+
+        .rotate {
+            animation: turn 3s infinite alternate;
+        }
+
+        @keyframes slide {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes turn {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(10deg);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CREATIVE LENS</h1>
+        <p>Photography Portfolio</p>
+    </header>
+
+    <div class="banner">
+        <p>Explore our latest photography collections!</p>
+    </div>
+
+    <h2>Our Gallery</h2>
+
+    <div class="gallery">
+
+        <img src="https://picsum.photos/id/1015/300/200"
+             alt="Nature Photography">
+
+        <img class="skew"
+             src="https://picsum.photos/id/1011/300/200"
+             alt="Landscape Photography">
+
+        <img class="rotate"
+             src="https://picsum.photos/id/1016/300/200"
+             alt="Creative Photography">
+
+    </div>
+
+    <button>Explore More</button>
+
+</body>
+</html>

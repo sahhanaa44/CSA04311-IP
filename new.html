@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PWA - Progressive Web Application</title>
+    <link rel="manifest" href="manifest.json">
+</head> 
+<body>
+
+<h1>Welcome to PWA</h1>
+<p>Progressive Web Application</p>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3wYG424r-o1NW7lWoQs6xPhOuhHp11Jmi-PZKunqh_g&s"
+     alt="Portrait Photography" width="300">
+
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>

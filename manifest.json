@@ -1,0 +1,8 @@
+{
+  "name": "My Shopping App",
+  "short_name": "Shopping",
+  "start_url": "new.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0000ff"
+}
